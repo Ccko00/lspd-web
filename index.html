@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>LSPD - Oficiální stránka</title>
+<link rel="icon" type="image/png" href="img/logo.png">
+<style>
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+/* Menu nahoře */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: rgba(10,46,92,0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  z-index: 10;
+  font-family: Arial, sans-serif;
+}
+nav img { height: 50px; }
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+nav a:hover { text-decoration: underline; }
+
+/* Hero sekce */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('img/patrol.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero::after {
+  content:"";
+  position:absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.5);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+.hero-content img {
+  height: 120px;
+  margin-bottom: 20px;
+}
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+.hero-content .button {
+  display: block;
+  width: 250px;
+  margin: 10px auto;
+  padding: 15px;
+  background: #0a2e5c;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+  text-align: center;
+}
+.hero-content .button:hover { background: #133b75; }
+
+/* Další sekce */
+section {
+  padding: 80px 50px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+h2 { color: #0a2e5c; margin-bottom: 15px; }
+p, ul { margin-bottom: 15px; line-height: 1.6; color: #0a2e5c; }
+ul { list-style: disc; margin-left: 20px; }
+.img-full { width: 100%; margin: 15px 0; border-radius: 6px; }
+
+/* Footer */
+footer {
+  background: #0a2e5c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsivita */
+@media(max-width:768px){
+  nav { flex-direction: column; padding: 10px 20px; }
+  nav div { margin-top: 10px; display: flex; flex-wrap: wrap; justify-content: center; }
+  nav a { margin: 5px; }
+  .hero-content h1 { font-size: 36px; }
+  .hero-content .button { width: 80%; }
+}
+</style>
+</head>
+<body>
+
+<!-- Menu -->
+<nav>
+  <img src="img/logo.png" alt="LSPD Logo">
+  <div>
+    <a href="#domu">Domů</a>
+    <a href="#onas">O nás</a>
+    <a href="#nabor">Nábor</a>
+    <a href="#vedeni">Vedení</a>
+    <a href="#akce">Akce</a>
+    <a href="#kontakt">Kontakt</a>
+  </div>
+</nav>
+
+<!-- Hero sekce -->
+<div class="hero">
+  <div class="hero-content">
+    <img src="img/logo.png" alt="LSPD Logo">
+    <h1>Los Santos Police Department</h1>
+    <a href="https://docs.google.com/forms/d/1tv9iWBpOZ_hTKG2TmKi4svmXr1zoVDPR0_QaGUY06Zs/edit" class="button">Přihlásit se do náboru 🚓</a>
+  </div>
+</div>
+
+<!-- Sekce -->
+<section id="domu">
+  <h2>O LSPD 🚓</h2>
+  <p>Los Santos Police Department je moderní a profesionální policejní sbor, který <strong>chrání obyvatele města</strong> a zajišťuje bezpečí na každém rohu. 👮‍♂️ Naši důstojníci jsou dobře vyškoleni, připraveni na krizové situace a používají ty nejmodernější technologie. 💡</p>
+</section>
+
+<section id="nabor">
+  <h2>Nábor 📝</h2>
+  <p>Chceš se stát součástí LSPD a stát na straně zákona? Pokud splňuješ následující kritéria, můžeš se přihlásit:</p>
+  <ul>
+    <li>Věk min. 21 let 🎂</li>
+    <li>Čistý trestní rejstřík ✅</li>
+    <li>Řidičský průkaz 🚗</li>
+    <li>Zbrojní průkaz 🔫</li>
+    <li>Psychotesty 🧠</li>
+    <li>Fyzická kondice 💪</li>
+    <li>Maturita 🎓</li>
+  </ul>
+  <p>Přidej se k nám a staň se součástí týmu, který udržuje pořádek ve městě! 🚨</p>
+</section>
+
+<section id="vedeni">
+  <h2>Vedení LSPD 🏛️</h2>
+  <ul>
+    <li>Chief: Nicole Carter 👩‍✈️</li>
+    <li>Assistant Chief: Luis Carter 👨‍✈️</li>
+  </ul>
+  <a href="mailto:stiznosti@lspd.ls" </a>
+  <p>Máte připomínky, stížnosti nebo návrhy? Vaše zpětná vazba je pro nás důležitá. <strong>📧 Posílejte vše na: stiznosti@lspd.ls</strong> a my se o to postaráme co nejdříve.</p>
+</section>
+
+<section id="akce">
+  <h2>Akce LSPD 🔥</h2>
+  <div>
+    <img src="img/action1.jpg" alt="Akce 1" class="img-full">
+    <img src="img/action2.jpg" alt="Akce 2" class="img-full">
+  </div>
+  <p>Naši důstojníci pravidelně zasahují a udržují pořádek – od rutinního hlídkování po náročné operace. 💥 Sledujte naše akce a buďte v obraze! 👀</p>
+</section>
+
+<section id="kontakt">
+  <h2>Kontakt 📞</h2>
+  <p>Adresa: Mission Row Police Station, Los Santos</p>
+  <p>Telefon: 911</p>
+  <p>Email: lspd@los-santos.gov</p>
+</section>
+
+<footer>
+  &copy; 2025 Los Santos Police Department
+</footer>
+
+</body>
+</html>
